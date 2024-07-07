@@ -22,7 +22,7 @@
     <div class="btns mt-3 mb-5">
       <a href="/listings/<%= listing._id %>/edit" class=" btn btn-dark edit-btn col-1 offset-3">Edit</a>
     
-      <form method="POST" action="/listings/<%=listing._id%>?_method=DELETE">
+      <form method="POST" action="/listings/<%= listing._id %>?_method=DELETE">
         <button class="btn btn-danger delete-btn offset-5">Delete</button>
       </form>
     </div>
@@ -46,6 +46,17 @@
         <button class="btn btn-outline-danger">Submit</button>
 
       </form>
+
+      <hr/>
+
+      
+      <h4>All Reviews</h4>
+      <ul>
+        <% for(review of listing.reviews){ %>
+          <li><%= review.comment %>, <%= review.rating %> stars</li>
+        <% } %>
+      </ul>
+
     </div>
 
   </div>
