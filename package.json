@@ -1,7 +1,7 @@
 {
-  "engines":{
-    "node": "v20.14.0"
-  },
+  "engines": {
+        "node": "v20.14.0"
+      },
   "name": "wanderlust",
   "version": "1.0.0",
   "description": "",
